@@ -1,12 +1,7 @@
-/* ===== 音乐播放器 优化样式 ===== */
+/* ===== 音乐播放器样式 ===== */
 .music-player-card {
     max-width: 700px;
     margin: 0 auto var(--space-xl);
-    transition: var(--transition);
-}
-
-.music-player-card:hover {
-    box-shadow: var(--shadow-lg);
 }
 
 .player-content {
@@ -15,10 +10,8 @@
     gap: var(--space-md);
     flex-wrap: wrap;
     justify-content: center;
-    padding: var(--space-sm) 0;
 }
 
-/* 封面旋转动画（播放时旋转，暂停时停止） */
 .player-cover {
     width: 140px;
     height: 140px;
@@ -28,18 +21,8 @@
     transition: var(--transition);
 }
 
-.player-cover.playing {
-    animation: rotate 8s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
 .player-cover:hover {
     transform: scale(1.05);
-    box-shadow: var(--shadow-lg);
 }
 
 .player-info {
@@ -56,11 +39,6 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    transition: var(--transition);
-}
-
-.player-song:hover {
-    color: var(--primary-color);
 }
 
 .player-singer {
@@ -73,19 +51,11 @@
     overflow: hidden;
 }
 
-/* 播放控制区与音量控制区 统一布局 */
-.player-control-wrapper {
-    display: flex;
-    align-items: center;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-sm);
-    flex-wrap: wrap;
-}
-
 .player-controls {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
 }
 
 .player-btn {
@@ -103,104 +73,10 @@
     box-shadow: var(--shadow-sm);
 }
 
-/* 播放/暂停按钮 突出显示 */
-#play-btn, #pause-btn {
-    width: 55px;
-    height: 55px;
-    font-size: 1.3rem;
-    background: var(--dark-color);
-}
-
 .player-btn:hover {
     background: var(--dark-color);
     transform: scale(1.1);
     box-shadow: var(--shadow-md);
-}
-
-#play-btn:hover, #pause-btn:hover {
-    background: var(--primary-color);
-}
-
-/* 音量控制 样式优化（与进度条统一） */
-.volume-control {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    flex: 0 0 auto;
-    min-width: 120px;
-}
-
-.volume-icon {
-    color: var(--text-gray);
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: var(--transition);
-    width: 24px;
-    text-align: center;
-}
-
-.volume-icon:hover {
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-/* 音量滑块 样式（与进度条一致） */
-.volume-slider {
-    width: 100px;
-    height: 8px;
-    background: #e0e0e0;
-    border-radius: var(--radius-sm);
-    outline: none;
-    appearance: none;
-    transition: var(--transition);
-}
-
-.volume-slider:hover {
-    height: 10px;
-}
-
-/* 滑块轨道样式 */
-.volume-slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    background: white;
-    border: 2px solid var(--primary-color);
-    border-radius: var(--radius-full);
-    cursor: grab;
-    transition: var(--transition-fast);
-    box-shadow: var(--shadow-sm);
-}
-
-.volume-slider::-webkit-slider-thumb:hover {
-    transform: scale(1.2);
-    box-shadow: var(--shadow-md);
-}
-
-/* 音量百分比提示（hover显示） */
-.volume-tooltip {
-    position: relative;
-}
-
-.volume-tooltip::after {
-    content: attr(data-volume) '%';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--dark-color);
-    color: white;
-    font-size: 0.8rem;
-    padding: 2px 6px;
-    border-radius: var(--radius-sm);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
-    white-space: nowrap;
-}
-
-.volume-tooltip:hover::after {
-    opacity: 1;
 }
 
 .player-link {
@@ -217,7 +93,6 @@
 .player-link:hover {
     color: var(--primary-light);
     text-decoration: underline;
-    transform: translateX(3px);
 }
 
 .player-loading {
@@ -225,13 +100,8 @@
     text-align: center;
     padding: var(--space-lg) 0;
     font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-xs);
 }
 
-/* 进度条 样式优化 */
 .progress-container {
     width: 100%;
     height: 8px;
@@ -240,16 +110,11 @@
     position: relative;
     cursor: pointer;
     margin-top: var(--space-sm);
-    transition: var(--transition);
-}
-
-.progress-container:hover {
-    height: 10px;
 }
 
 .progress-played {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     border-radius: var(--radius-sm);
     width: 0%;
     transition: width 0.2s linear;
@@ -268,16 +133,10 @@
     cursor: grab;
     display: none;
     transition: var(--transition-fast);
-    box-shadow: var(--shadow-sm);
 }
 
 .progress-container:hover .progress-handle {
     display: block;
-}
-
-.progress-handle:hover {
-    transform: translateY(-50%) scale(1.2);
-    box-shadow: var(--shadow-md);
 }
 
 .progress-time {
@@ -288,24 +147,19 @@
     margin-top: var(--space-xs);
 }
 
-/* 响应式适配优化 */
+/* ===== 音乐播放器响应式样式 ===== */
 @media (max-width: 768px) {
-    .player-control-wrapper {
-        gap: var(--space-sm);
+    .player-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .player-info {
+        width: 100%;
+    }
+
+    .player-controls {
         justify-content: center;
-    }
-
-    .volume-control {
-        min-width: 100px;
-    }
-
-    .volume-slider {
-        width: 80px;
-    }
-
-    .player-cover {
-        width: 120px;
-        height: 120px;
     }
 }
 
@@ -313,17 +167,30 @@
     .player-song {
         font-size: 1.3rem;
     }
+}
 
-    .player-cover {
-        width: 100px;
-        height: 100px;
+/* ===== 封面旋转动画 ===== */
+@keyframes rotate-cover {
+    from {
+        transform: rotate(0deg);
     }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
-    .volume-control {
-        min-width: 80px;
-    }
+/* 播放时旋转 */
+.player-cover.playing {
+    animation: rotate-cover 10s linear infinite;
+    border-radius: 50%; /* 圆形封面更好看，可选 */
+}
 
-    .volume-slider {
-        width: 60px;
-    }
+/* 暂停时停止旋转（但保留当前位置）*/
+.player-cover {
+    animation-play-state: paused;
+}
+
+/* 播放时恢复动画 */
+.player-cover.playing {
+    animation-play-state: running;
 }
