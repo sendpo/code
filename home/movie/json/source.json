@@ -1,7 +1,9 @@
 [
   { "id": "1080zyk", "name": "1080资源库" },
   { "id": "baiduyun", "name": "百度云源" },
-  { "id": "liangzi", "name": "量子资源" },
+  { "id": "hongniu", "name": "红牛资源" },
+  { "id": "maotai", "name": "茅台资源" },
+  { "id": "dytt", "name": "电影天堂" },
   { "id": "wujin", "name": "无尽资源" },
   { "id": "ukuzy", "name": "U酷资源" }
 ]
