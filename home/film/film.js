@@ -189,7 +189,7 @@ function renderMovieList(movies, isSearchResult = false) {
       localStorage.setItem('currentMovie', JSON.stringify(movie));
       
       // 在新标签页打开详情页
-      window.open('film-detail.html', '_blank');
+      window.open('film-detail.php', '_blank');
     });
 
     card.innerHTML = `
