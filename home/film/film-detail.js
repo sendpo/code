@@ -27,6 +27,8 @@ function renderMovieDetail(movie) {
   document.getElementById('movieRemarks').textContent = movie.update_info || "未知";
   document.getElementById('movieContent').innerHTML = movie.content || "暂无简介";
 
+  document.title = `${movie.name || '未知影片'} - 影视资源库`;
+
   const playUrls = parsePlayUrls(movie.play_url);
   renderEpisodeList(playUrls);
   if (playUrls.length > 0) initArtPlayer(playUrls[0].url);
