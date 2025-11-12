@@ -1,0 +1,68 @@
+/* 自定义工具类 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.play-btn-hover {
+  transition: all 0.3s ease;
+}
+.play-btn-hover:hover {
+  background-color: #165dff;
+  color: white;
+}
+.episode-active {
+  background-color: #165dff;
+  color: white;
+}
+.info-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .info-card {
+    padding: 1.5rem;
+  }
+}
+.text-collapse {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.text-collapse.expanded {
+  -webkit-line-clamp: 999;
+}
+
+/* 播放器固定高度，防止控制栏上浮 */
+#playerWrapper {
+  background-color: black;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+}
+@media (min-width: 768px) {
+  #playerWrapper {
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  #playerWrapper {
+    height: 550px;
+  }
+}
+
+/* 视频始终占满容器，控制栏固定底部 */
+#playerContainer video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  background-color: black !important;
+}
