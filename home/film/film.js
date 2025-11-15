@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // 🔹 动态加载 source.json
 async function loadSources() {
   try {
-    const res = await fetch('https://cdn.jsdelivr.net/gh/sendpo/code@refs/heads/main/home/film/json/source.json');
+    const res = await fetch('https://cdn.jsdelivr.net/gh/sendpo/code@refs/heads/main/json/film.json');
     const list = await res.json();
 
     const select = document.getElementById('sourceSelect');
@@ -261,4 +261,5 @@ function showEmpty(customText = '暂无数据') {
   document.getElementById('movieList').classList.add('hidden');
   document.getElementById('pagination').classList.add('hidden');
   document.querySelector('#empty p').textContent = customText;
+
 }
