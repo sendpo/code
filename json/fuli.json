@@ -1,5 +1,12 @@
 [
   { "id": "fanhao", "name": "番号资源" },
-  { "id": "115", "name": "115资源" },
-  { "id": "slapibf", "name": "森林资源" }
+  { "id": "155", "name": "155资源" },
+  { "id": "slapibf", "name": "森林资源" },
+  { "id": "shayu", "name": "鲨鱼资源" },
+  { "id": "yutu", "name": "玉兔资源" },
+  { "id": "naixx", "name": "奶香香资源" },
+  { "id": "91jp", "name": "91精品资源" },
+  { "id": "xing", "name": "幸资源" },
+  { "id": "xingba", "name": "杏吧资源" },
+  { "id": "souav", "name": "搜av资源" }
 ]
