@@ -196,7 +196,7 @@ function renderMovieList(movies, isSearchResult = false) {
       localStorage.setItem('currentMovie', JSON.stringify(movie));
 
       // 在新标签页打开详情页
-      window.open('fuli-detail.html', '_blank');
+      window.open('fuli-detail.php', '_blank');
     });
 
     card.innerHTML = `
