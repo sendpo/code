@@ -88,7 +88,7 @@ async function loadSources() {
     // 生成当天日期作为版本号，例如：20251116
     const dateVersion = new Date().toISOString().slice(0, 10).replace(/-/g, '');
 
-    const url = `https://cdn.jsdelivr.net/gh/sendpo/code@refs/heads/main/json/fuli.json?v=${dateVersion}`;
+    const url = `https://cdn.jsdelivr.net/gh/sendpo/mycode@refs/heads/main/json/fuli.json?v=${dateVersion}`;
     console.log("加载源 URL:", url);
 
     const res = await fetch(url, { cache: 'no-store' });

@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // 🔹 动态加载 source.json
 async function loadSources() {
   try {
-    const res = await fetch('https://cdn.jsdelivr.net/gh/sendpo/code@refs/heads/main/json/film.json');
+    const res = await fetch('https://cdn.jsdelivr.net/gh/sendpo/mycode@refs/heads/main/json/film.json');
     const list = await res.json();
 
     const select = document.getElementById('sourceSelect');
